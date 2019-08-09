@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Form</title>
+        <link rel="stylesheet"  type="text/css" href="assest/css/form.css">
+        <script src="assest/js/form.js"></script>
+    </head>
+    <body>
+        <!--  div wrapper start-->
+        <div class="wrapper">
+            <!-- div container start-->
+            <div class="container">
+                <!-- div form1 start-->
+                <div class="form1">
+                        <!--div head start-->
+                        <div id="head">
+                            Employee Detail Form
+                        </div>
+                        <!--div close-->
+                        <form name="empForm" onsubmit="return validation()" action="#" method="POST">
+                            <!--div sub head start -->
+                            <div id="sub_head">
+                                Please fill your correct information
+                            </div>
+                            <!--div sub head close -->
+                            <!--image for employee-->
+                            <img id="image" src="assest/image/emp.png" >
+                            <label for=eid>Employee Id</label>
+                           
+                            <input id="input_text_small" type="text" name=eid value="#12319" disabled>
+
+                            <label for=fullName>Full Name</label>
+                            <input class="input_text_half" type="text"  name="firstname" placeholder="First Name" id="fname">
+                            
+                            <input class="input_text_half" type="text"  name="lastname" placeholder="Last Name" id="lname">
+                            <span class="error" id="nameErr"></span>
+
+                            <label for=email>Email</label>
+                            <input class="input_text_full" id="email" type="email" placeholder="name@gmail.com">
+                            <span class="error" id="emailErr"></span>
+
+                            <label for=contactNo>Contact No.</label>
+                            <input class="input_text_small" id="areaCode" type="text" name="areaCode" placeholder="Area Code">
+                            <input class="input_text_half" id="phone" type="text" name="phoneNo" placeholder="Phone No.">
+                            <span class="error" id="contactErr"></span>
+                            <div class="row">
+                                <div class="col">
+                                    <!--dob-->
+                                    <label for=dob>D.O.B</label>
+                                    <input class="input_text_half" id="dob" type="date" name="dob">
+                                    <span class="error" id="dobErr"></span>
+                                </div>
+                                <div class="col">
+                                <!--gender-->
+                                    <label for=gender>Gender</label>
+                                    <input class="gender"  type="radio" name="gender" value=female>Female
+                                    <input class="gender"  type="radio" name="gender" value=male>Male
+                                    <input class="gender"  type="radio" name="gender" value=other>Other
+                                    <span class="error" id="genErr"></span>
+                                </div>
+                            </div>
+                            
+
+                            <label for=current>Current Address</label>
+                            <input  id="address" type="text" name="addressLine1" placeholder="Address Line1">
+                            <span class="error" id="addressErr"></span>
+
+                            <input id="address" type="text" name=addressLine2 placeholder="Address Line2/optional">
+                            <div class="row">
+                                    <div class="col">
+                                        <!--city-->
+                                        <label for=city>City</label>
+                                        <input type="text" id="city" name=city placeholder="City">
+                                        <span class="error" id="cityErr"></span>
+                                    </div>
+                                    <div class="col">
+                                    <!--state -->
+                                        <select  name="state" id="state">
+                                                <option value="state">State</option> 
+                                                <option value="Rajasthan">Rajasthan</option>
+                                                <option value="Punjab">Punjab</option>
+                                                <option value="Delhi">Delhi</option>
+                                        </select>
+                                        <span class="error" id="stateErr"></span>
+                                    </div>
+                                    <div class="col">
+                                        <!--country-->
+                                        <label  for=country>Country</label>
+                                        <input class="input_text_half" id="country" type="text" name=country placeholder="country">
+                                        <span class="error" id="countryErr"></span>
+                                  </div>
+                                    <div class="col">
+                                        <!--pincode-->  
+                                        <label for=pincode>Pincode</label>
+                                        <input id="pinBlock" type="text" name="text" placeholder="Pin Code">
+                                        <span class="error" id="pinErr"></span>
+                                    </div>
+                            </div>
+                              <!--div button start--> 
+                            <div id="buttonDiv">
+                                <button id="submit" type="submit">SUBMIT</button>
+                                <button id="reset" type="reset">RESET</button>
+                            </div>
+                            <!--button div colse-->
+                        </form>
+                </div>
+                <!--form1 div close -->
+            </div>
+            <!--container div close-->
+        </div>
+        <!--wrapper div close-->
+    </body>
+</html>
