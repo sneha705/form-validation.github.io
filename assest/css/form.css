@@ -1,0 +1,140 @@
+/*body css*/
+body {
+
+    padding:0px;
+    background-color: LightGray;
+ 
+}
+/*wrapper div css */
+.wrapper{
+
+padding:0 px;
+}
+.container{
+   padding:10px 150px 30px 150px;
+   
+   
+    
+}
+/* form1 div css*/
+.form1{
+ margin:0 auto;
+ width:80%;
+ padding:10px 20px 10px 20px;
+ background-color:white;
+}
+
+/* head div css*/
+#head{
+    color:white;
+    background-color: DimGray;
+    font-size: 40px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align:center;
+    margin-bottom: 20px;
+}
+/*label css */
+label{
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:18px;
+    padding-bottom:10px; 
+}
+/* button css*/
+button{
+    display:inline-block;
+}
+/* sub div css*/
+#sub_head{
+    margin-bottom: 20px;
+    font-style: italic;
+    font-size: 20px;
+}
+/* input type text css*/
+input[type="text"]{
+    margin-bottom:15px; 
+    height:30px;
+   
+}
+/*gender check box button */
+.gender{
+    margin-bottom:15px; 
+   margin-left: -2px;
+    
+}
+/* input type for address*/
+#address{
+    display: block;
+    width:98.2%;
+}
+/*input text size small*/
+.input_text_small{
+    width:20%;
+    margin-bottom:15px; 
+    height:40px;
+   
+}
+/*input text size full*/
+.input_text_full{
+    width:98.2%;
+    margin-bottom:15px; 
+    height:30px;
+}
+/*input text size half*/
+.input_text_half{
+    width:47.6%;
+    margin-bottom:15px; 
+    height:30px;
+}
+/*employee image*/
+#image{
+    width:200px;
+    height:177px;
+    float: right;
+    display:inline-block;
+    margin-top:-60px;
+   
+}
+#pinBlock{
+    width:47.6%;
+    margin-bottom:15px; 
+    height:30px;
+    display:block;
+}
+
+#submit{
+width:49.5%;
+height:53px;
+background-color:DimGray ;
+margin-bottom: 30px;
+font-size: 25px;
+color:white;
+}
+#reset{
+    width:49.5%;
+    height:53px;
+    background-color: Tomato  ;
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+/*error span*/
+.error{
+    color:red;
+    font-style: italic;
+    margin-top: -2px;
+    display: block;
+}
+#buttonDiv{
+    display:block;
+}
+.row{
+width:100%;
+}
+.col{
+    width:47.6%;
+    display: inline-block;
+}
+#state{
+    width:40.6%;
+   
+}
