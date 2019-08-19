@@ -60,14 +60,16 @@ function contact(id1,error){
   }
 }
 //gender validation function
-function genderValid(id1,error){
+function genderValid(error){
  
-  if($(id1).is(":checked")){
-    $(error).text(""); 
+  if($('input[type="radio"][name="gender"]:checked').length==0){
+  
+    flag=false;
+    $(error).text("please select the gender"); 
  }
  else{
-   flag=false;
-   $(error).text("please select gender");
+   flag=true;
+   $(error).text("");
  }
 }
   //validation for email
@@ -98,7 +100,7 @@ numSix(area,contactErr);
 requiredField(dob,dobErr);
 
 //gender function call
-genderValid("#gender","#genErr");
+genderValid("#genErr");
 
 //state validation function call
 stateValidation(state,stateErr);
