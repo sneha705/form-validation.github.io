@@ -11,6 +11,7 @@ else{
    return flag; 
   } 
 }
+
 //Empty and number Field Validation func
 function requiredField(id1,error){
     flag = true;
@@ -69,54 +70,49 @@ function genderValid(id1,error){
    $(error).text("please select gender");
  }
 }
+  //validation for email
+  function emailValid(id1,error){
+    var regx=/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+    if(regx.test(id1.value)&id1.value!=""){
+      flag=true;
+      errorMsg(flag,id1,error);
+    } 
+    else{
+      flag=false;
+      errorMsg(flag,id1,error);
+    }
+    
+  }
 //validate function
 function validation() {
-  requiredField(fname,nameErr);
-  requiredField(lname,nameErr);
-
+  requiredField(fname,fnameErr);
+  requiredField(lname,lnameErr);
 //email validation
-  requiredField(email,emailErr);
+  emailValid(email,emailErr);
 
 //phone validation func call
-var phone = document.getElementById("phone");
-var contactErr=document.getElementById("contactErr");
-var area = document.getElementById("area");
 contact(phone,contactErr);
 numSix(area,contactErr);
     
 //Dob validation function call
-var dob = document.getElementById("dob");
-var dobErr=document.getElementById("dobErr");
 requiredField(dob,dobErr);
 
 //gender function call
-var gender = document.getElementsByName("gender");
-var genErr=document.getElementById("genErr");
-genderValid(gender,genErr);
+genderValid("#gender","#genErr");
 
 //state validation function call
-var state = document.getElementById("state");
-var stateErr=document.getElementById("stateErr");
 stateValidation(state,stateErr);
   
 //address validation function call
-var address = document.getElementById("address");
-var addressErr=document.getElementById("addressErr");
 requiredField(address,addressErr);
 
 //city validation function call
-var city = document.getElementById("city");
-var cityErr=document.getElementById("cityErr");
 requiredField(city,cityErr);
 
 //country validation
-var country = document.getElementById("country");
-var countryErr=document.getElementById("countryErr");
 requiredField(country,countryErr);
 
 //pincode validation
-var pinBlock = document.getElementById("pinBlock");
-var pinErr=document.getElementById("pinErr")
 numSix(pinBlock,pinErr);
 }
 

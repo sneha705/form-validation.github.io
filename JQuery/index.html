@@ -20,7 +20,7 @@
                             Employee Detail Form
                         </div>
                         <!--div close-->
-                        <form name="empForm" onsubmit="event.preventDefault();return validation()" action="#" method="POST">
+                        <form name="empForm" onsubmit="event.preventDefault();return validation()" action="#php" method="POST">
                             <!--div sub head start -->
                             <div id="sub_head">
                                 Please fill your correct information
@@ -34,13 +34,14 @@
                             <input id="input_text_small" type="text" name=eid value="#12319" disabled>
 
                             <label for=fullName>Full Name</label>
-                            <input id="fname" class="input_text_half" onchange="requiredField(fname,nameErr)" type="text"  name="firstname" placeholder="First Name">
-                            
-                            <input class="input_text_half" type="text" onchange="requiredField(lname,nameErr)" name="lastname" placeholder="Last Name" id="lname" >
-                            <span class="error" id="nameErr"></span>
+                            <input id="fname" class="input_text_half" onchange="requiredField(fname,fnameErr)" type="text"  name="firstname" placeholder="First Name">
+                            <span class="error" id="fnameErr"></span>
+
+                            <input class="input_text_half" type="text" onchange="requiredField(lname,lnameErr)" name="lastname" placeholder="Last Name" id="lname" >
+                            <span class="error" id="lnameErr"></span>
 
                             <label for=email>Email</label>
-                            <input class="input_text_full" id="email" type="email" onchange="requiredField(email,emailErr)"  placeholder="name@gmail.com">
+                            <input class="input_text_full" id="email" type="email" onchange="emailValid(email,emailErr)"  placeholder="name@gmail.com">
                             <span class="error" id="emailErr"></span>
 
                             <label for=contactNo>Contact No.</label>
@@ -69,12 +70,12 @@
                             <input  id="address" type="text" name="addressLine1" onchange="requiredField(address,addressErr)" placeholder="Address Line1">
                             <span class="error" id="addressErr"></span>
 
-                            <input type="text"  name=addressLine2 placeholder="Address Line2/optional">
+                            <input type="text" class="input_text_full" name=addressLine2 placeholder="Address Line2/optional">
                             <div class="row">
                                     <div class="col">
                                         <!--city-->
                                         <label for=city>City</label>
-                                        <input type="text" id="city" onchange="requiredField(city,cityErr)" name=city placeholder="City">
+                                        <input type="text" class="input_text_half" id="city" onchange="requiredField(city,cityErr)" name=city placeholder="City">
                                         <span class="error" id="cityErr"></span>
                                     </div>
                                     <div class="col">
@@ -102,7 +103,7 @@
                             </div>
                               <!--div button start--> 
                             <div id="buttonDiv">
-                                <button id="submit" type="submit">SUBMIT</button>
+                                <button id="submit" type="submit" onsubmit="msg()">SUBMIT</button>
                                 <button id="reset" type="reset" onclick="resetValid()">RESET</button>
                             </div>
                             <!--button div colse-->
